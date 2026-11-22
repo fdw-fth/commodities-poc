@@ -25,7 +25,8 @@ FALLBACK = f"https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e
 
 
 def cli(*args: str, check: bool = True) -> subprocess.CompletedProcess:
-    exe = shutil.which("databricks") or sys.exit("Install the Databricks CLI first: https://docs.databricks.com/dev-tools/cli/install.html")
+    exe = shutil.which("databricks") or sys.exit(
+        "Install the Databricks CLI first: https://docs.databricks.com/dev-tools/cli/install.html")
     res = subprocess.run([exe, *args], text=True, capture_output=True)
     if check and res.returncode != 0:
         sys.exit(f"databricks {' '.join(args)} failed:\n{res.stderr or res.stdout}")
