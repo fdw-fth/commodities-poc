@@ -1,0 +1,7 @@
+# Local development & CI (Databricks installs what it needs inside the notebooks)
+pandas>=2.0
+numpy>=1.26
+openpyxl>=3.1
+statsmodels>=0.14
+pyspark==3.5.3        # needs Java 17
+pytest>=8

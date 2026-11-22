@@ -1,0 +1,20 @@
+# Local-only files
+private/
+CLAUDE.md
+.claude/
+
+# Data and credentials
+data/
+*.xlsx
+.databricks/
+.databrickscfg
+.env
+
+# Python / Spark / OS
+__pycache__/
+.venv/
+.pytest_cache/
+spark-warehouse/
+metastore_db/
+derby.log
+.DS_Store

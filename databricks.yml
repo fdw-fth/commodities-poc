@@ -1,0 +1,18 @@
+# Declarative Automation Bundle (formerly "Asset Bundle").
+#   databricks bundle deploy  &&  databricks bundle run commodities_pipeline
+bundle:
+  name: commodities_poc
+
+include:
+  - resources/*.yml
+
+sync:  # only src/ is needed in the workspace
+  exclude: [tests/**, docs/**, scripts/**, .github/**]
+
+variables:
+  catalog: {default: workspace}
+  schema: {default: commodities}
+
+targets:
+  free:
+    default: true   # host comes from your CLI login (databricks auth login)
