@@ -1,5 +1,7 @@
 # Commodity Prices Lakehouse
 
+[![CI](https://github.com/fdw-fth/commodities-poc/actions/workflows/ci.yml/badge.svg)](https://github.com/fdw-fth/commodities-poc/actions/workflows/ci.yml)
+
 Monthly commodity prices since 1960 (World Bank "Pink Sheet"), turned into bronze/silver/gold tables in
 Unity Catalog, a dashboard, a Genie Q&A space and a 12-month baseline forecast tracked in MLflow.
 Everything is deployed as a Databricks bundle and runs as one scheduled serverless job.
